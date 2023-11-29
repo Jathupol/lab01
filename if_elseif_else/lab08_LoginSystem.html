@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let user = prompt('กรุณากรอกชื่อผู้ใช้งาน:', 'guest');
+        
+        switch (user) {
+          case 'codecamp':
+            let password = prompt('กรุณากรอกรหัสผ่าน:');
+            if (password === '123456') {
+              user = 'codecamp';
+            } else {
+              alert('Wrong password');
+              break;
+            }
+           
+          default:
+            if (user !== 'codecamp') {
+              user = 'guest';
+            }
+            alert('Welcome, ' + user);
+            break;
+        }
+        
+        
+        </script>
+        
+</body>
+</html>

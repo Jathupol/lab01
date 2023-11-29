@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let secretNumber = Math.floor(Math.random() * 99) + 1; // เลขลับระหว่าง 1 ถึง 99
+let numberOfGuesses = 0; // จำนวนครั้งที่ทาย
+
+// ผู้เล่นแรกเลือกตัวเลข
+let playerOneNumber = parseInt(prompt("ผู้เล่นแรก โปรดเลือกตัวเลขระหว่าง 1 ถึง 99:"));
+
+// ผู้เล่นทายเลขจนกว่าจะถูก
+while (true) {
+  let guess = parseInt(prompt("ผู้เล่นที่ต้องการทาย โปรดทายตัวเลข:"));
+
+  numberOfGuesses++; // เพิ่มจำนวนครั้งที่ทาย
+
+  if (guess === secretNumber) {
+    alert(`ยินดีด้วย! คุณทายถูกต้อง (${secretNumber}) ในครั้งที่ ${numberOfGuesses}`);
+    break;
+  } else {
+    let hint = guess > secretNumber ? "มากกว่า" : "น้อยกว่า";
+    alert(`ตอบผิด! เลขที่คุณทาย ${hint} เลขลับ`);
+  }
+}
+
+    </script>
+</body>
+</html>

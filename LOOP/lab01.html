@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+let numbers = [];
+let sum = 0;
+
+while (true) {
+  let input = prompt("โปรดป้อนตัวเลข (ป้อน 0 เพื่อหยุด):");
+  
+  if (input === null || input === "" || input === "0" || isNaN(input)) {
+    break;
+  }
+  
+  let number = parseFloat(input);
+  if (!isNaN(number)) {
+    numbers.push(number);
+    sum += number;
+  }
+}
+
+if (numbers.length > 0) {
+  let average = sum / numbers.length;
+  alert(`ผลรวม: ${sum}\nค่าเฉลี่ย: ${average}`);
+} else {
+  alert("ไม่มีตัวเลขหรือข้อมูลที่ถูกต้องที่ใส่เข้ามา");
+}
+
+    </script>
+</body>
+</html>
